@@ -1,0 +1,255 @@
+/* Mengatur gaya umum untuk tubuh halaman */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Mengatur gaya header */
+header {
+    background-color: #00509e; /* Warna biru */
+    color: white;
+    padding: 20px;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    transition: background-color 0.3s, padding 0.3s; /* Transisi untuk perubahan gaya saat discroll */
+}
+
+/* Gaya header saat discroll */
+header.scrolled {
+    background-color: #003f7f; /* Warna biru lebih gelap saat discroll */
+    padding: 10px 20px;
+}
+
+/* Mengatur gaya logo */
+.logo {
+    width: 50px;
+    height: auto;
+    display: block;
+    margin: 0 auto 10px;
+}
+
+/* Mengatur gaya slogan */
+.slogan {
+    font-size: 14px;
+    margin: 0;
+}
+
+/* Mengatur gaya konten utama */
+main {
+    padding: 80px 20px 20px; /* Menyesuaikan agar tidak tertutupi header tetap */
+    text-align: center;
+}
+
+
+/* Media query untuk tampilan mobile */
+@media (max-width: 768px) {
+    header {
+        padding: 15px;
+        font-size: 0.8rem;
+    }
+
+    main {
+        padding: 100px 10px 20px; /* Tambahkan padding atas agar konten tidak tertutupi header */
+    }
+
+    section {
+        text-align: left; /* Mengubah teks menjadi rata kiri untuk tampilan mobile */
+    }
+
+    .logo {
+        width: 40px; /* Mengurangi ukuran logo untuk tampilan mobile */
+    }
+}
+
+/* Media query untuk tampilan desktop */
+@media (min-width: 769px) {
+    header {
+        font-size: 1.2rem;
+    }
+}
+
+/* Mengatur gaya section pengenalan */
+#introduction {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 40px 20px;
+    animation: fadeIn 1s ease-in-out; /* Animasi muncul */
+}
+
+.intro-logo {
+    width: 100px;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.intro-text {
+    max-width: 600px;
+    text-align: center;
+}
+
+/* Animasi sederhana untuk muncul */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Mengatur gaya section layanan */
+#services {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.services-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.service-box {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin: 10px;
+    padding: 20px;
+    width: calc(50% - 40px); /* Dua kolom pada desktop */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    opacity: 0; /* Mulai dengan opacity 0 */
+    text-align: center; /* Menambahkan text-align center */
+}
+
+.service-img {
+    width: 100%;
+    height: 200px; /* Menyediakan ukuran tetap untuk semua gambar */
+    object-fit: cover; /* Mengatur gambar agar sesuai dengan ukuran */
+    border-radius: 8px 8px 0 0;
+}
+
+.service-box h3 {
+    font-size: 18px;
+    margin: 15px 0;
+}
+
+.service-box p {
+    font-size: 14px;
+    color: #666;
+}
+
+.service-box a {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #25d366; /* Warna hijau WhatsApp */
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.service-box:hover {
+    transform: scale(1.05); /* Animasi memperbesar saat dihover */
+}
+
+@media (max-width: 768px) {
+    .service-box {
+        width: calc(100% - 40px); /* Satu kolom pada mobile */
+    }
+}
+
+#testimonials {
+    text-align: center;
+    margin: 20px;
+  }
+  
+  .testimonial-carousel {
+    position: relative;
+    width: 100%;
+    height: auto;
+  }
+  
+  .testimonial-item {
+    position: absolute;
+    width: 100%; /* Pastikan memenuhi lebar carousel */
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    display: none; /* Sembunyikan secara default */
+  }
+  
+  .profile-pic {
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    margin-bottom: 10px;
+  }
+  
+  .stars span {
+    color: #FFD700;
+    font-size: 1.5rem;
+  }
+  
+  .testimonial-item p {
+    font-size: 1rem;
+    margin: 10px 0;
+  }
+  
+  /* --- Styles untuk bagian Kontak Kami --- */
+
+/* Kontainer utama untuk kontak */
+.contact-container {
+    background-color: #2366a2; /* Warna latar belakang biru */
+    color: white; /* Warna teks */
+    padding: 20px; /* Jarak dalam kontainer */
+    text-align: center; /* Teks rata tengah */
+    font-family: 'Montserrat', sans-serif; /* Menggunakan font Montserrat */
+}
+
+/* Judul "Kontak Kami" */
+.contact-container h2 {
+    font-size: 24px; /* Ukuran font judul */
+    margin-bottom: 10px; /* Jarak bawah judul */
+}
+
+/* Teks di dalam kontak */
+.contact-container p {
+    font-size: 18px; /* Ukuran font teks */
+    margin: 5px 0; /* Jarak antara setiap baris */
+}
+
+/* Link di dalam kontak (telepon, WhatsApp, email, Google Maps) */
+.contact-container a {
+    color: #ffd700; /* Warna link kuning */
+    text-decoration: none; /* Menghilangkan garis bawah pada link */
+}
+
+/* Efek hover pada link */
+.contact-container a:hover {
+    text-decoration: underline; /* Menggarisbawahi link saat dihover */
+}
+
+/* Footer utama */
+footer {
+    background-color: #184b74; /* Warna latar belakang footer */
+    color: white; /* Warna teks di footer */
+    text-align: center; /* Teks rata tengah */
+    padding: 10px; /* Jarak dalam footer */
+    font-size: 14px; /* Ukuran font di footer */
+    font-family: 'Montserrat', sans-serif; /* Font Montserrat */
+}
+
+#testimonials, #contact {
+    margin-bottom: 140px; /* Atur sesuai kebutuhan */
+    padding-top: 70px; /* Jika perlu, untuk memberikan jarak dari bagian atas */
+}
+
